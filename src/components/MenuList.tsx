@@ -6,7 +6,7 @@ type MenuListProps = {
 const MenuList = ({isOpen}: MenuListProps) => {
     return (
         <nav>
-            <ul className={"absolute top-14 right-0 bg-primary w-full h-screen flex flex-col items-center justify-center transition-all " + (isOpen ? 'opacity-100' : 'opacity-0')}>
+            <ul className={"absolute right-0 bg-primary w-full h-screen flex flex-col items-center justify-center transition-all duration-300 -z-50 " + (isOpen ? 'top-14' : '-top-[100vh]')}>
                 <li className="mb-4">
                     <Link href="#about" className="text-white font-bold text-xl">About</Link>
                 </li>
