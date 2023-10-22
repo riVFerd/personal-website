@@ -4,14 +4,14 @@ import {FaGithub, FaInstagram, FaLinkedin, FaLocationDot, FaXTwitter} from "reac
 import Chips from "@/components/Chips";
 import {MdEmail} from "react-icons/md";
 
-const Contacts = () => {
+const Contacts = ({address}: {address: string}) => {
   const goToLink = (link: string) => {
     window.open(link, "_blank");
   }
 
   return (
     <div id="contacts" className="mt-8">
-      <p className="text-white text-xl flex items-center gap-2"><FaLocationDot/> Malang, Indonesia</p>
+      <p className="text-white text-xl flex items-center gap-2"><FaLocationDot/>{address}</p>
       <div className="mt-4 flex gap-2 flex-wrap">
         <Chips className="text-white" onClick={() => goToLink('https://github.com/rivferd')}><FaGithub/>Github</Chips>
         <Chips className="text-white" onClick={() => goToLink('https://www.linkedin.com/in/virgy-ferdian-surya-firmansyah-b69870221/')}><FaLinkedin/>LinkedIn</Chips>
