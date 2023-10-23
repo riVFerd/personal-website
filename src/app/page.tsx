@@ -2,15 +2,17 @@ import Image from 'next/image';
 import Contacts from "@/app/Contacts";
 import TechsStack from "@/app/TechsStack";
 import SanityClient from "@/utils/SanitiyClient";
+import Project from "@/Models/Project";
+import ProjectCard from "@/components/ProjectCard";
 
 async function getData() {
   const res = await SanityClient.getClient()?.fetch(`*[_type == "profile"]{name, bio, address, "imgUrl": image.asset->url}`);
-  console.log(res[0]);
   return res[0];
 }
 
 export default async function Home() {
   const data = await getData();
+  const projectList = await Project.getProjects();
 
   return (
     <main className="flex min-h-screen flex-col items-center px-6 py-24">
@@ -27,6 +29,14 @@ export default async function Home() {
         </div>
       </div>
       <TechsStack/>
+      <div id="projects" className="flex flex-col w-full min-h-screen mt-8 lg:px-16">
+        <h1 className="text-2xl font-bold text-white my-8">Projects</h1>
+        <div id="project-list" className="flex flex-col w-full gap-8 lg:gap-16 lg:flex-row">
+          {
+            projectList.map((project: any, index: number) => <ProjectCard project={project} key={index}/>)
+          }
+        </div>
+      </div>
     </main>
   )
 }
