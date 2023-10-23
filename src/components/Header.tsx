@@ -10,7 +10,7 @@ const Header = () => {
 
     return (
         <>
-            <header className="w-full fixed flex flex-col">
+            <header className="w-full fixed flex flex-col z-50">
                 <div className="w-full h-16 bg-primary flex justify-between items-center px-4">
                     <Image src="/vf-logo.png" alt="rivferd logo" width="48" height="48"/>
                     <MenuButton className="bg-white" isOpen={isOpen} setIsOpen={setIsOpen}/>
