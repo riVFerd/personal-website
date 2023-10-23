@@ -13,11 +13,11 @@ const Contacts = ({address}: {address: string}) => {
     <div id="contacts" className="mt-8">
       <p className="text-white text-xl flex items-center gap-2"><FaLocationDot/>{address}</p>
       <div className="mt-4 flex gap-2 flex-wrap">
-        <Chips className="text-white" onClick={() => goToLink('https://github.com/rivferd')}><FaGithub/>Github</Chips>
-        <Chips className="text-white" onClick={() => goToLink('https://www.linkedin.com/in/virgy-ferdian-surya-firmansyah-b69870221/')}><FaLinkedin/>LinkedIn</Chips>
-        <Chips className="text-white" onClick={() => goToLink('mailto:1virgyferdian213@gmail.com')}><MdEmail/>Email</Chips>
-        <Chips className="text-white" onClick={() => goToLink('https://twitter.com/rivferd0')}><FaXTwitter/>Twitter</Chips>
-        <Chips className="text-white" onClick={() => goToLink('https://instagram.com/rivferd')}><FaInstagram/>Instagram</Chips>
+        <Chips className="text-white hover:scale-105" onClick={() => goToLink('https://github.com/rivferd')}><FaGithub/>Github</Chips>
+        <Chips className="text-white hover:scale-105" onClick={() => goToLink('https://www.linkedin.com/in/virgy-ferdian-surya-firmansyah-b69870221/')}><FaLinkedin/>LinkedIn</Chips>
+        <Chips className="text-white hover:scale-105" onClick={() => goToLink('mailto:1virgyferdian213@gmail.com')}><MdEmail/>Email</Chips>
+        <Chips className="text-white hover:scale-105" onClick={() => goToLink('https://twitter.com/rivferd0')}><FaXTwitter/>Twitter</Chips>
+        <Chips className="text-white hover:scale-105" onClick={() => goToLink('https://instagram.com/rivferd')}><FaInstagram/>Instagram</Chips>
       </div>
     </div>
   )

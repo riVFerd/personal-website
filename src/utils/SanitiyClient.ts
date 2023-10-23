@@ -18,7 +18,6 @@ export default class SanityClient {
   static getClient() {
     if (SanityClient._instance === null) {
       SanityClient._instance = new SanityClient();
-      console.log(SanityClient._instance.client)
     }
     return SanityClient._instance.client;
   }
