@@ -15,11 +15,11 @@ export default class Project {
     this.isFeatured = isFeatured || false;
   }
 
-  static fromJson(json: any) {
+  static fromJson(json: any): Project {
     return new Project(json.imgUrl, json.title, json['slug'].current, json.content, json.isFeatured);
   }
 
-  static async getProjects() {
+  static async getProjects(): Promise<Project[]> {
     const query = `*[_type == "project"]{
         "imgUrl": thumbnail.asset->url,
         title,
@@ -29,5 +29,18 @@ export default class Project {
     }`;
     const json = await SanityClient.getClient()?.fetch(query);
     return json.map((projectJson: any) => this.fromJson(projectJson));
+  }
+
+  static async getProjectBySlug(slug: string): Promise<Project> {
+    const query = `*[_type == "project" && slug.current == $slug]{
+        "imgUrl": thumbnail.asset->url,
+        title,
+        slug,
+        content,
+        isFeatured
+    }`;
+    const params = {slug};
+    const json = await SanityClient.getClient()?.fetch(query, params);
+    return json.map((projectJson: any) => this.fromJson(projectJson))[0];
   }
 }
