@@ -30,8 +30,9 @@ export default async function Home() {
       </div>
       <TechsStack/>
       <div id="projects" className="flex flex-col w-full min-h-screen mt-8 lg:px-16">
-        <h1 className="text-2xl font-bold text-white my-8">Projects</h1>
-        <div id="project-list" className="flex flex-col w-full gap-8 lg:gap-16 lg:flex-row">
+        <h1 className="text-2xl font-bold text-white mt-8">Projects</h1>
+        <h2 className="text-lg text-white my-4">Some of the projects I have built:</h2>
+        <div id="project-list" className="flex flex-col w-full flex-wrap gap-8 md:flex-row justify-center">
           {
             projectList.map((project: any, index: number) => <ProjectCard project={project} key={index}/>)
           }

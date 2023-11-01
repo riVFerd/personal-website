@@ -8,6 +8,7 @@ const TechsStack = () => {
   return (
     <div id="about-section" className="w-full lg:px-16">
       <h1 className="text-2xl text-white font-bold mt-16">Tech Stack</h1>
+      <h2 className="text-lg text-white my-4">The skills, tools and technologies I am good at:</h2>
       <div className="flex flex-wrap mt-4 lg:gap-4">
         <Chips className={defaultClassName}><span className="text-4xl text-blue-500"><SiTailwindcss/></span>TailwindCSS</Chips>
         <Chips className={defaultClassName}><span className="text-4xl text-blue-500"><SiReact/></span>React.js</Chips>

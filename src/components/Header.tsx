@@ -5,9 +5,11 @@ import MenuButton from "@/components/MenuButton";
 import MenuList from "@/components/MenuList";
 import Image from "next/image";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const pathName = usePathname();
 
     return (
         <>
@@ -16,9 +18,15 @@ const Header = () => {
                     <Link href="/">
                         <Image src="/vf-logo.png" alt="rivferd logo" width="48" height="48"/>
                     </Link>
-                    <MenuButton className="bg-white" isOpen={isOpen} setIsOpen={setIsOpen}/>
+                    <MenuButton className="bg-white lg:hidden" isOpen={isOpen} setIsOpen={setIsOpen}/>
+                    <nav className="hidden lg:block">
+                        <ul className="flex flex-row gap-8 text-white mx-8">
+                            <li><Link href='/' className={`${pathName === '/' ? 'font-extrabold' : ''}`}>About</Link></li>
+                            <li><Link href='/project' className={`${pathName === '/project' ? 'font-extrabold' : ''}`}>Projects</Link></li>
+                        </ul>
+                    </nav>
                 </div>
-                <MenuList isOpen={isOpen}/>
+                <MenuList isOpen={isOpen} setIsOpen={setIsOpen}/>
             </header>
         </>
     )
