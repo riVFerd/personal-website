@@ -18,7 +18,7 @@ const MenuList = ({isOpen, setIsOpen}: MenuListProps) => {
                     <Link href="/" className={`text-white text-xl ${pathName === '/' ? 'font-extrabold' : ''}`}>About</Link>
                 </li>
                 <li className="mb-4" onClick={closeMenu}>
-                    <Link href="/project" className={`text-white text-xl ${pathName === '/project' ? 'font-extrabold' : ''}`}>Experience</Link>
+                    <Link href="/project" className={`text-white text-xl ${pathName === '/project' ? 'font-extrabold' : ''}`}>Projects</Link>
                 </li>
             </ul>
         </nav>
