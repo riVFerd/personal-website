@@ -12,7 +12,7 @@
     "@portabletext/react": "^3.0.11",
     "@sanity/image-url": "^1.0.2",
     "next": "13.5.4",
-    "next-sanity": "^5.5.8",
+    "next-sanity": "^5.5.10",
     "next-sanity-image": "^6.1.0",
     "react": "^18",
     "react-dom": "^18",
