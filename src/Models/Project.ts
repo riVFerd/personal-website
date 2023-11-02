@@ -25,7 +25,19 @@ export default class Project {
         title,
         slug,
         content,
-        isFeatured
+        featured
+    }`;
+    const json = await SanityClient.getClient()?.fetch(query);
+    return json.map((projectJson: any) => this.fromJson(projectJson));
+  }
+
+  static async getFeaturedProjects(): Promise<Project[]> {
+    const query = `*[_type == "project" && featured == true]{
+        "imgUrl": thumbnail.asset->url,
+        title,
+        slug,
+        content,
+        featured
     }`;
     const json = await SanityClient.getClient()?.fetch(query);
     return json.map((projectJson: any) => this.fromJson(projectJson));
@@ -37,7 +49,7 @@ export default class Project {
         title,
         slug,
         content,
-        isFeatured
+        featured
     }`;
     const params = {slug};
     const json = await SanityClient.getClient()?.fetch(query, params);
