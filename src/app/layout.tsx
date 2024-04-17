@@ -1,15 +1,15 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import Header from "@/components/Header";
+import {Poppins} from 'next/font/google'
+import Header from "@/app/components/Header";
 import React from "react";
 
-const inter = Inter({ subsets: ['latin'] })
+const poppins = Poppins({ subsets: ['latin'], weight: ["400", "500", "600", "700"] })
 export const revalidate = 60
 
 export const metadata: Metadata = {
   title: 'Virgy Ferdian',
-  description: 'Virgy\'s personal website.',
+  description: 'Virgy Ferdian personal website.',
 }
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + " bg-gradient-to-b from-primary to-black"}>
+      <body className={poppins.className + " bg-gradient-to-b from-primary to-black w-screen overflow-x-hidden"}>
         <Header/>
         {children}
       </body>
