@@ -44,12 +44,12 @@ const TechsStack = () => {
       <h2 className="text-lg text-white my-4">The skills, tools and technologies I am good at:</h2>
       <div className="flex flex-wrap mt-4 lg:gap-4 items-center justify-center">
         <Chips className={defaultClassName}><span className="text-4xl text-blue-400"><SiFlutter/></span>Flutter</Chips>
-        <Chips className={defaultClassName}><span className="text-4xl text-orange-500"><SiFirebase/></span>Firebase</Chips>
         <Chips className={defaultClassName}><span className="text-4xl"><SiNextdotjs/></span>Next.js</Chips>
         <Chips className={defaultClassName}><span className="text-4xl text-blue-500"><SiReact/></span>React.js</Chips>
         <Chips className={defaultClassName}><span className="text-4xl text-blue-500"><SiTailwindcss/></span>TailwindCSS</Chips>
         <Chips className={defaultClassName}><span className="text-4xl text-red-500"><SiLaravel/></span>Laravel</Chips>
         <Chips className={defaultClassName}><span className="text-4xl text-gray-200"><SiFlask/></span>Flask</Chips>
+        <Chips className={defaultClassName}><span className="text-4xl text-orange-500"><SiFirebase/></span>Firebase</Chips>
         <Chips className={defaultClassName}><span className="text-4xl text-green-700"><SiMongodb/></span>MongoDB</Chips>
         <Chips className={defaultClassName}><span className="text-4xl text-blue-400"><GrMysql/></span>MySQL</Chips>
       </div>
