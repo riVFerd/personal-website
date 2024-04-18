@@ -6,7 +6,7 @@ const ProjectCard = ({project}: { project: Project }) => {
   return (
     <Link href={`/project/${project.projectSlug}`} className="w-full md:w-[45%] lg:w-[30%]">
       <div className="overflow-hidden rounded-xl w-full border-4 border-secondary shadow-md shadow-primary-blue/75 transition-all lg:hover:shadow-lg lg:hover:scale-105 lg:hover:shadow-primary-blue">
-        <Image src={project.imgUrl} className="w-full md:h-48 object-cover" alt="project-img" width={640} height={320}/>
+        <Image src={project.imgUrl} className="w-full h-48 object-cover" alt="project-img" width={640} height={320}/>
         <h1 className="text-xl font-bold text-primary text-left bg-secondary p-2">{project.projectTitle}</h1>
       </div>
     </Link>
