@@ -1,4 +1,4 @@
-import SanityClient from "@/utils/SanitiyClient";
+import SanityClient from "@/lib/SanitiyClient";
 
 export default class Project {
   imgUrl: string;

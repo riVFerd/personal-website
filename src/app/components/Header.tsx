@@ -18,7 +18,7 @@ const Header = () => {
                     <Link href="/">
                         <Image src="/vf-logo.png" alt="rivferd logo" width="48" height="48"/>
                     </Link>
-                    <MenuButton className="bg-white lg:hidden" isOpen={isOpen} setIsOpen={setIsOpen}/>
+                    <MenuButton className="select-none lg:hidden pt-4" isOpen={isOpen} setIsOpen={setIsOpen}/>
                     <nav className="hidden lg:block">
                         <ul className="flex flex-row gap-8 mx-8">
                             <li><Link href='/' className={`${pathName === '/' ? 'font-extrabold text-white' : 'text-gray-300'}`}>About</Link></li>

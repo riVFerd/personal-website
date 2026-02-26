@@ -16,7 +16,7 @@ const config: Config = {
       },
       colors: {
         'primary': '#22333bff',
-        'secondary': '#eae0d5ff',
+        'secondary': '#fafafaff',
         'tertiary': '#c6ac8fff',
         'primary-purple': '#c16ad7ff',
         'primary-blue': '#8cbadbff',
@@ -25,6 +25,8 @@ const config: Config = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 }
 export default config
